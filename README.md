@@ -54,8 +54,9 @@ InterviewAI is a full-stack MERN application designed to act as your personal mo
    GROQ_API_KEY=your_free_groq_api_key
    NODE_ENV=development
    CLIENT_URL=http://localhost:5173
-   REDIS_HOST=localhost
+   REDIS_HOST=your_upstash_redis_endpoint
    REDIS_PORT=6379
+   REDIS_PASSWORD=your_upstash_password
    ```
 
 3. **Run the Application**
@@ -66,14 +67,21 @@ InterviewAI is a full-stack MERN application designed to act as your personal mo
 
 ## Deployment
 
+The application is architected to be deployed entirely for free using the following stack:
+
 **Frontend (Vercel)**
 - Connect your GitHub repo to Vercel.
-- Set the Root Directory to `client/`.
-- Vercel will automatically use the `vercel.json` file for client-side routing.
+- Set the Root Directory to `client`.
 - Set `VITE_API_URL` to your backend production URL.
+- Vercel will automatically use the `vercel.json` file for client-side routing.
 
-**Backend (Railway / Render)**
-- Connect your GitHub repo to your platform of choice.
-- Set the Root Directory to `server/`.
-- The included `Procfile` and `package.json` will handle the build (`npm install`) and start (`npm start`) commands.
-- Be sure to configure the Environment Variables in the platform dashboard.
+**Backend (Render)**
+- Connect your GitHub repo to Render and create a Web Service.
+- Set the Root Directory to `server`.
+- Build Command: `npm install`
+- Start Command: `npm start`
+- Add all required environment variables, ensuring `NODE_ENV=production` and `CLIENT_URL` matches your Vercel URL.
+
+**Database & Queue (MongoDB Atlas & Upstash)**
+- Host your primary database for free on MongoDB Atlas (ensure your IP Access List allows connections from `0.0.0.0/0`).
+- Host your serverless Redis queue for free on Upstash (provides `REDIS_HOST`, `REDIS_PORT`, and `REDIS_PASSWORD`).
