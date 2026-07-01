@@ -1,4 +1,4 @@
-# InterviewAI 🎙️👨‍💻
+# InterviewAI 🎙️
 *Your Personal AI Mock Interviewer & Peer-to-Peer Coding Platform*
 
 InterviewAI is a comprehensive full-stack MERN application designed to help software engineers ace their next technical interview. Whether you want to practice answering behavioral questions with a real-time AI coach or battle a peer in a live competitive coding challenge, InterviewAI provides the perfect environment to hone your skills.
