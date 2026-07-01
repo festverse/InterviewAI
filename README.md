@@ -1,4 +1,4 @@
-# InterviewAI — Ace Your Next Interview
+# InterviewAI: Ace Your Next Interview
 
 InterviewAI is a full-stack MERN application designed to act as your personal mock interview coach. Practice for your next big job by answering AI-generated questions in a Solo Interview, or pair up with a real human via our real-time Peer Matchmaking system!
 
