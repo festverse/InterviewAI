@@ -1,0 +1,199 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-6);
+}
+
+.disconnectAlert {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: var(--color-warning);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  font-weight: var(--font-weight-medium);
+}
+
+.header {
+  margin-bottom: var(--space-8);
+}
+
+.rolesRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-surface);
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.roleBadge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.roleName {
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.activeRole {
+  color: var(--accent-primary);
+}
+
+.timer {
+  font-family: monospace;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  background: var(--bg-primary);
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+}
+
+.waitingNotice {
+  text-align: center;
+  padding: var(--space-6);
+  color: var(--text-secondary);
+  background: var(--bg-surface);
+  margin-top: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border-subtle);
+}
+
+.activeArea {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.questionCard {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: var(--space-8);
+  border-left: 4px solid var(--accent-primary);
+}
+
+.categoryBadge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--accent-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+
+.questionText {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+}
+
+.blurText {
+  color: transparent;
+  text-shadow: 0 0 15px rgba(255,255,255,0.7);
+  user-select: none;
+}
+
+.workspace {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: var(--space-6);
+}
+
+.panel h3 {
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.transcriptBox {
+  min-height: 250px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+.placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.finalText {
+  color: var(--text-primary);
+}
+
+.interimText {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.controlsRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.controlsCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.micButton {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  border: none;
+  background: var(--bg-surface-active);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.micButton:hover {
+  background: var(--border-primary);
+  transform: scale(1.05);
+}
+
+.micButton.listening {
+  background: var(--color-error);
+  color: white;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+  animation: pulse 2s infinite;
+}
+
+.micHint {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}

@@ -1,0 +1,16 @@
+{
+  "name": "interview-coach",
+  "version": "1.0.0",
+  "description": "AI Mock Interview Coach — MERN full-stack application",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "install:all": "cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--navbar-height));
+  padding: var(--space-6);
+}
+
+.lobbyCard, .waitingCard {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  padding: var(--space-10);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconWrapper {
+  width: 72px;
+  height: 72px;
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--accent-primary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-6);
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-3);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-8);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-4);
+  align-self: flex-start;
+}
+
+.typeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  width: 100%;
+  margin-bottom: var(--space-8);
+}
+
+.typeOption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  background: var(--bg-surface);
+  border: 2px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.typeOption:hover {
+  border-color: var(--border-primary);
+  background: var(--bg-surface-hover);
+}
+
+.typeOption.selected {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: rgba(124, 58, 237, 0.05);
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+}
+
+/* Waiting State */
+.timer {
+  font-family: monospace;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin: var(--space-6) 0;
+}
+
+.waitingText {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+.cancelBtn {
+  color: var(--text-muted);
+  border-color: var(--border-subtle);
+}
+
+.cancelBtn:hover {
+  color: var(--color-error);
+  border-color: var(--color-error);
+  background: rgba(239, 68, 68, 0.1);
+}

@@ -1,0 +1,29 @@
+{
+  "name": "interview-coach-server",
+  "version": "1.0.0",
+  "description": "AI Mock Interview Coach — Express + Socket.io Backend",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bullmq": "^5.79.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.1",
+    "groq-sdk": "^0.9.1",
+    "helmet": "^8.2.0",
+    "ioredis": "^5.11.1",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.11.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

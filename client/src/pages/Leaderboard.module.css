@@ -1,0 +1,112 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.iconWrapper {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+.boardCard {
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.name {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.eloCol {
+  text-align: right;
+}
+
+.eloCell {
+  text-align: right;
+  font-weight: 700;
+  color: var(--color-primary);
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+.empty {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: 3rem !important;
+}
+
+.top1 {
+  background: rgba(255, 215, 0, 0.1);
+}
+.top1 td {
+  color: #ffd700;
+}
+
+.top2 {
+  background: rgba(192, 192, 192, 0.1);
+}
+
+.top3 {
+  background: rgba(205, 127, 50, 0.1);
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.pageInfo {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}

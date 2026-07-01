@@ -1,0 +1,139 @@
+.container {
+  height: calc(100vh - 64px); /* Full height minus navbar */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-card);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.statusInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.statusInfo h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.badge {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.splitView {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.problemPane {
+  padding: 2rem;
+  border-right: 1px solid var(--color-border);
+  background-color: var(--color-background);
+}
+
+.problemTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.problemDesc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--color-text-muted);
+}
+
+.testCases h4 {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.testCase {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 1rem;
+}
+
+.testCase strong {
+  color: var(--color-primary);
+}
+
+.testCase pre {
+  margin: 0.5rem 0;
+  font-family: monospace;
+  background-color: #000;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.partnerView {
+  margin-top: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.partnerView h4 {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.partnerEditor {
+  flex: 1;
+  min-height: 300px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.editorPane {
+  background-color: #1e1e1e; /* VS Code dark theme background */
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.queuedText {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.passed {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.failed {
+  color: #f87171;
+  font-weight: 600;
+}
