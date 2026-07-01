@@ -1,87 +1,118 @@
-# InterviewAI: Ace Your Next Interview
+# InterviewAI 🎙️👨‍💻
+*Your Personal AI Mock Interviewer & Peer-to-Peer Coding Platform*
 
-InterviewAI is a full-stack MERN application designed to act as your personal mock interview coach. Practice for your next big job by answering AI-generated questions in a Solo Interview, or pair up with a real human via our real-time Peer Matchmaking system!
+InterviewAI is a comprehensive full-stack MERN application designed to help software engineers ace their next technical interview. Whether you want to practice answering behavioral questions with a real-time AI coach or battle a peer in a live competitive coding challenge, InterviewAI provides the perfect environment to hone your skills.
 
-## Features
+## 🌟 Key Features
 
-- **Solo AI Interviews**: 
-  - Dynamic question generation tailored to your target role (e.g., Frontend Engineer) and experience level.
-  - In-browser Speech-to-Text records your answers automatically.
-  - Intelligent feedback scoring your clarity, technical depth, structure, pacing, and filler words using Groq's ultra-fast Llama-3 API.
-- **Peer-to-Peer Mock Interviews**:
-  - Live matchmaking queue connects you with others practicing similar interview types.
-  - Synchronized real-time interview room via Socket.io.
-  - Live transcripts sync between peers, role swapping at the midpoint, and synchronized countdown timers.
-- **Competitive Coding (ELO)**:
-  - Battle other engineers in a live algorithm challenge.
-  - Split-screen UI featuring the Monaco Editor (VS Code engine).
-  - Background code execution queues powered by Redis and BullMQ.
-  - Global ELO rating system and real-time paginated Leaderboard.
+* **Real-time AI Voice Interviews**: 
+  * Uses the browser's native Web Speech API to seamlessly convert your voice to text.
+  * AI evaluates your answers using Groq's ultra-fast Llama-3 API.
+  * Receive instant, granular feedback on clarity, technical depth, structure, and filler words.
+* **Peer-to-Peer Mock Interviews**:
+  * Live WebSocket matchmaking queue connects you with engineers practicing similar skills.
+  * Synchronized real-time interview rooms with split-screen roles.
+* **Competitive Algorithm Battles (ELO System)**:
+  * Integrated Monaco Editor (VS Code engine) for live coding.
+  * Background code execution queues powered by Redis and BullMQ.
+  * Earn ELO points and climb the global, real-time leaderboard!
+* **Scalable Architecture**:
+  * Asynchronous job processing to evaluate untrusted code safely.
+  * JWT-based secure authentication.
+  * Rate-limited API routes for robust security.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-**Frontend (React/Vite)**
-- React Router v6
-- Zustand (State Management)
-- Socket.io Client for real-time WebSockets
-- Monaco Editor (`@monaco-editor/react`)
-- Web Speech API for voice recognition and text-to-speech
-- Recharts for data visualization
-- CSS Modules for scoped styling
+**Frontend**
+- **React.js (Vite)**: Lightning fast UI.
+- **Zustand**: Lightweight global state management.
+- **Socket.io-client**: Real-time bidirectional event handling.
+- **Monaco Editor**: Powerful in-browser IDE experience.
+- **Recharts**: Data visualization for performance metrics.
+- **CSS Modules**: Scoped, modular CSS styling.
 
-**Backend (Node.js/Express)**
-- MongoDB + Mongoose for database
-- Redis + BullMQ for background code execution queues
-- Socket.io for matchmaking and room events
-- Groq SDK (`llama-3.3-70b-versatile`) for AI generation and scoring
-- JWT + bcrypt for secure authentication
-- Helmet, Morgan, and Rate Limiting for security
+**Backend**
+- **Node.js & Express**: High-performance REST API.
+- **MongoDB & Mongoose**: Flexible NoSQL database and ORM.
+- **Redis & BullMQ**: In-memory data store for highly reliable background job queues.
+- **Socket.io**: Real-time room synchronization and matchmaking.
+- **Groq SDK (Llama-3)**: Blazing fast LLM inference.
+- **Bcrypt & JWT**: Secure password hashing and stateless authentication.
 
-## Getting Started (Local Development)
+## 📂 Project Structure
 
-1. **Clone and Install**
-   Navigate to the root directory and install dependencies for both client and server:
-   ```bash
-   npm run install:all
-   ```
+```
+interview-coach/
+├── client/                     # React Frontend
+│   ├── src/
+│   │   ├── components/         # Reusable UI components
+│   │   ├── pages/              # Main route views (Dashboard, Solo, Peer, Leaderboard)
+│   │   ├── store/              # Zustand global state stores
+│   │   ├── styles/             # Global CSS variables and utility classes
+│   │   └── utils/              # Helper functions (API requests, formatting)
+│   └── vercel.json             # Vercel deployment configuration
+└── server/                     # Node.js/Express Backend
+    ├── src/
+    │   ├── controllers/        # Request handlers for API routes
+    │   ├── models/             # Mongoose database schemas (User, PeerRoom, Leaderboard)
+    │   ├── routes/             # Express API route definitions
+    │   ├── services/           # Business logic (Groq AI, BullMQ Queues, ELO Calculation)
+    │   ├── socket/             # WebSocket event handlers for matchmaking and rooms
+    │   └── workers/            # BullMQ background job processors
+    └── server.js               # Application entry point
+```
 
-2. **Environment Variables**
-   Create a `.env` file in the `server/` directory:
-   ```env
-   PORT=5000
-   MONGODB_URI=your_mongodb_connection_string
-   JWT_SECRET=super_secret_jwt_key
-   GROQ_API_KEY=your_free_groq_api_key
-   NODE_ENV=development
-   CLIENT_URL=http://localhost:5173
-   REDIS_HOST=your_upstash_redis_endpoint
-   REDIS_PORT=6379
-   REDIS_PASSWORD=your_upstash_password
-   ```
+## 🚀 Deployment Architecture
 
-3. **Run the Application**
-   From the root directory, start both the frontend and backend concurrently:
-   ```bash
-   npm run dev
-   ```
+This application is architected to be deployed entirely for free using the following stack:
 
-## Deployment
+* **Frontend (Vercel)**
+  - Set the Root Directory to `client`.
+  - Set `VITE_API_URL` to your backend production URL.
+  - Vercel automatically uses the `vercel.json` file for client-side routing.
+* **Backend (Render)**
+  - Set the Root Directory to `server`.
+  - Build Command: `npm install`
+  - Start Command: `npm start`
+  - Set all environment variables (including `NODE_ENV=production`).
+* **Database (MongoDB Atlas)**
+  - Ensure your IP Access List is set to allow connections from `0.0.0.0/0`.
+* **Queue (Upstash Redis)**
+  - Provides the `REDIS_HOST`, `REDIS_PORT`, and `REDIS_PASSWORD` for background execution tasks.
 
-The application is architected to be deployed entirely for free using the following stack:
+## 💻 Local Development
 
-**Frontend (Vercel)**
-- Connect your GitHub repo to Vercel.
-- Set the Root Directory to `client`.
-- Set `VITE_API_URL` to your backend production URL.
-- Vercel will automatically use the `vercel.json` file for client-side routing.
+### 1. Prerequisites
+- Node.js (v18+)
+- Local or Cloud MongoDB Database
+- Local Redis Server (or an Upstash cloud Redis instance)
 
-**Backend (Render)**
-- Connect your GitHub repo to Render and create a Web Service.
-- Set the Root Directory to `server`.
-- Build Command: `npm install`
-- Start Command: `npm start`
-- Add all required environment variables, ensuring `NODE_ENV=production` and `CLIENT_URL` matches your Vercel URL.
+### 2. Installation
+Clone the repository and install all dependencies for both client and server:
+```bash
+git clone https://github.com/festverse/InterviewAI.git
+cd InterviewAI
+npm run install:all
+```
 
-**Database & Queue (MongoDB Atlas & Upstash)**
-- Host your primary database for free on MongoDB Atlas (ensure your IP Access List allows connections from `0.0.0.0/0`).
-- Host your serverless Redis queue for free on Upstash (provides `REDIS_HOST`, `REDIS_PORT`, and `REDIS_PASSWORD`).
+### 3. Environment Configuration
+Create a `.env` file in the `server/` directory:
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=super_secret_jwt_key
+GROQ_API_KEY=your_free_groq_api_key
+NODE_ENV=development
+CLIENT_URL=http://localhost:5173
+
+# Redis Configuration (For BullMQ)
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=your_upstash_password_if_applicable
+```
+
+### 4. Run the App
+Start both the React frontend and Express backend concurrently:
+```bash
+npm run dev
+```
