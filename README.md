@@ -116,3 +116,7 @@ Start both the React frontend and Express backend concurrently:
 ```bash
 npm run dev
 ```
+
+## 📝 License
+
+&copy; 2026 Utsav Vasava. All rights reserved.
