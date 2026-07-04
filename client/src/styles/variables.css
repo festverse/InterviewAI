@@ -27,7 +27,7 @@
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%);
   --gradient-accent: linear-gradient(135deg, #e5e5e5 0%, #737373 100%);
-  --gradient-warm: linear-gradient(135deg, #ffffff 0%, #d4d4d4 100%);
+  --gradient-warm: linear-gradient(135deg, #d4d4d4 0%, #8c8c8c 100%);
   --gradient-surface: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
   --gradient-hero: linear-gradient(180deg, #000000 0%, #0a0a0a 50%, #111111 100%);
 
