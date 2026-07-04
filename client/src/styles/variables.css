@@ -1,48 +1,48 @@
 :root {
-  /* === Colors: Dark Premium Palette === */
-  --bg-primary: #06060f;
-  --bg-secondary: #0c0c1d;
-  --bg-tertiary: #12122a;
-  --bg-surface: #161630;
-  --bg-surface-hover: #1e1e42;
-  --bg-surface-active: #262655;
+  /* === Colors: Monochrome Minimalist Palette === */
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #111111;
+  --bg-surface: #171717;
+  --bg-surface-hover: #262626;
+  --bg-surface-active: #404040;
 
   /* Borders */
-  --border-primary: #2a2a5a;
-  --border-subtle: #1e1e44;
-  --border-accent: rgba(124, 58, 237, 0.3);
+  --border-primary: #333333;
+  --border-subtle: #1f1f1f;
+  --border-accent: rgba(255, 255, 255, 0.2);
 
   /* Text */
-  --text-primary: #f0f0ff;
-  --text-secondary: #9898cc;
-  --text-muted: #5e5e8a;
-  --text-inverse: #06060f;
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --text-muted: #737373;
+  --text-inverse: #000000;
 
   /* Accent Colors */
-  --accent-primary: #7c3aed;
-  --accent-primary-hover: #6d28d9;
-  --accent-secondary: #3b82f6;
-  --accent-tertiary: #06b6d4;
+  --accent-primary: #ffffff;
+  --accent-primary-hover: #e5e5e5;
+  --accent-secondary: #a3a3a3;
+  --accent-tertiary: #737373;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
-  --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-  --gradient-warm: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
-  --gradient-surface: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
-  --gradient-hero: linear-gradient(180deg, #06060f 0%, #0c0c1d 50%, #12122a 100%);
+  --gradient-primary: linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%);
+  --gradient-accent: linear-gradient(135deg, #e5e5e5 0%, #737373 100%);
+  --gradient-warm: linear-gradient(135deg, #ffffff 0%, #d4d4d4 100%);
+  --gradient-surface: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  --gradient-hero: linear-gradient(180deg, #000000 0%, #0a0a0a 50%, #111111 100%);
 
   /* Semantic */
   --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-error: #ef4444;
-  --color-info: #3b82f6;
+  --color-info: #ffffff;
 
   /* Glassmorphism */
-  --glass-bg: rgba(22, 22, 48, 0.6);
-  --glass-bg-strong: rgba(22, 22, 48, 0.85);
-  --glass-border: rgba(255, 255, 255, 0.06);
-  --glass-border-hover: rgba(255, 255, 255, 0.12);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --glass-bg: rgba(10, 10, 10, 0.6);
+  --glass-bg-strong: rgba(10, 10, 10, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-hover: rgba(255, 255, 255, 0.15);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
 
   /* === Typography === */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -94,8 +94,8 @@
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
   --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.5);
-  --shadow-glow-primary: 0 0 20px rgba(124, 58, 237, 0.3);
-  --shadow-glow-accent: 0 0 20px rgba(59, 130, 246, 0.3);
+  --shadow-glow-primary: 0 0 20px rgba(255, 255, 255, 0.15);
+  --shadow-glow-accent: 0 0 20px rgba(255, 255, 255, 0.10);
 
   /* === Transitions === */
   --transition-fast: 150ms ease;
