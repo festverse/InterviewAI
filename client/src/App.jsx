@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import useAuthStore from './stores/authStore';
+import Lenis from 'lenis';
+import 'lenis/dist/lenis.css';
 
 // Layout & Common
 import Navbar from './components/layout/Navbar';
@@ -30,6 +32,21 @@ const App = () => {
 
   useEffect(() => {
     initialize();
+
+    // Initialize Lenis for smooth scrolling
+    const lenis = new Lenis();
+
+    let rafId;
+    function raf(time) {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    }
+    rafId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
   }, [initialize]);
 
   return (

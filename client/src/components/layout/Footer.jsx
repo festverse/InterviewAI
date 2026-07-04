@@ -20,9 +20,9 @@ const Footer = () => {
               Ace your next technical interview with AI-powered practice and instant, actionable feedback.
             </p>
             <div className={styles.socials}>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer"><FiTwitter /></a>
-              <a href="https://github.com" target="_blank" rel="noreferrer"><FiGithub /></a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FiLinkedin /></a>
+              <a href="https://x.com/festverse0" target="_blank" rel="noreferrer"><FiTwitter /></a>
+              <a href="https://github.com/festverse" target="_blank" rel="noreferrer"><FiGithub /></a>
+              <a href="https://www.linkedin.com/in/utsav-vasava-655b6240b/" target="_blank" rel="noreferrer"><FiLinkedin /></a>
             </div>
           </div>
 
