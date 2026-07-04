@@ -135,7 +135,7 @@ const Landing = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ scale: 1.03, translateY: -5 }}
+              whileHover={{ scale: 1.03, y: -5 }}
               className={`${styles.featureCard} glass-card`}
             >
               <div className={styles.featureIconWrapper} style={{ background: feature.gradient }}>
@@ -170,7 +170,7 @@ const Landing = () => {
               key={index} 
               className={styles.step}
               variants={itemVariants}
-              whileHover={{ scale: 1.02, x: 10 }}
+              whileHover={{ scale: 1.02 }}
             >
               <div className={styles.stepNumber}>{index + 1}</div>
               <div className={styles.stepContent}>

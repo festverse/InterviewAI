@@ -132,7 +132,7 @@
 
 .featureCard {
   padding: var(--space-8);
-  transition: all var(--transition-base);
+  transition: border-color var(--transition-base), background var(--transition-base);
 }
 
 .featureCard:hover {
@@ -182,7 +182,7 @@
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  transition: all var(--transition-base);
+  transition: border-color var(--transition-base), background var(--transition-base);
 }
 
 .step:hover {
