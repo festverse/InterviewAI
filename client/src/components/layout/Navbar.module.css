@@ -69,8 +69,8 @@
 }
 
 .navLink.active {
-  color: var(--accent-primary);
-  background: rgba(124, 58, 237, 0.1);
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .divider {

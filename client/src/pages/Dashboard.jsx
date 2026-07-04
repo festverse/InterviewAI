@@ -76,7 +76,7 @@ const Dashboard = () => {
             {quickActions.map((action, index) => (
               <div key={index} className={`${styles.actionCard} glass-card`}>
                 <div className={styles.actionIconWrapper} style={{ background: action.gradient }}>
-                  <action.icon size={28} color="white" />
+                  <action.icon size={28} color="black" />
                 </div>
                 <h3 className={styles.actionTitle}>{action.title}</h3>
                 <p className={styles.actionDesc}>{action.description}</p>
