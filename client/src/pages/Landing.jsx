@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { FiZap, FiUsers, FiBarChart2, FiMic, FiArrowRight, FiShield, FiClock } from 'react-icons/fi';
+import { FiCommand, FiUsers, FiBarChart2, FiMic, FiArrowRight, FiShield, FiClock } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 import Button from '../components/common/Button';
 import useAuthStore from '../stores/authStore';
 import styles from './Landing.module.css';
@@ -35,26 +36,45 @@ const stats = [
 const Landing = () => {
   const { user } = useAuthStore();
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } }
+  };
+
   return (
     <div className="page">
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroGlow} />
-        <div className={styles.heroContent}>
-          <div className={styles.badge}>
-            <FiZap size={14} />
+        
+        <motion.div 
+          className={styles.heroContent}
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
+          <motion.div variants={itemVariants} className={styles.badge}>
+            <FiCommand size={14} />
             <span>AI-Powered Interview Preparation</span>
-          </div>
-          <h1 className={styles.heroTitle}>
+          </motion.div>
+          <motion.h1 variants={itemVariants} className={styles.heroTitle}>
             Ace Your Next
             <br />
             <span className="gradient-text">Technical Interview</span>
-          </h1>
-          <p className={styles.heroSubtitle}>
+          </motion.h1>
+          <motion.p variants={itemVariants} className={styles.heroSubtitle}>
             Practice with AI-generated questions tailored to your role, get instant
             feedback on your responses, and track your improvement over time.
-          </p>
-          <div className={styles.heroCta}>
+          </motion.p>
+          <motion.div variants={itemVariants} className={styles.heroCta}>
             {user ? (
               <Link to="/dashboard">
                 <Button variant="primary" size="lg">
@@ -77,18 +97,23 @@ const Landing = () => {
                 </Link>
               </>
             )}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Stats */}
-        <div className={styles.statsRow}>
+        <motion.div 
+          className={styles.statsRow}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, type: 'spring' }}
+        >
           {stats.map((stat, index) => (
             <div key={index} className={styles.statItem}>
               <span className={styles.statValue}>{stat.value}</span>
               <span className={styles.statLabel}>{stat.label}</span>
             </div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* Features Section */}
@@ -99,20 +124,28 @@ const Landing = () => {
             A complete interview preparation toolkit powered by AI
           </p>
         </div>
-        <div className={styles.featureGrid}>
+        <motion.div 
+          className={styles.featureGrid}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+        >
           {features.map((feature, index) => (
-            <div
+            <motion.div
               key={index}
-              className={`${styles.featureCard} glass-card animate-fade-in-up delay-${index + 1}`}
+              variants={itemVariants}
+              whileHover={{ scale: 1.03, translateY: -5 }}
+              className={`${styles.featureCard} glass-card`}
             >
               <div className={styles.featureIconWrapper} style={{ background: feature.gradient }}>
                 <feature.icon size={24} color="white" />
               </div>
               <h3 className={styles.featureTitle}>{feature.title}</h3>
               <p className={styles.featureDescription}>{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* How It Works */}
@@ -120,27 +153,44 @@ const Landing = () => {
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>How it <span className="gradient-text">works</span></h2>
         </div>
-        <div className={styles.steps}>
+        <motion.div 
+          className={styles.steps}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+        >
           {[
             { icon: FiShield, title: 'Create your profile', desc: 'Set your target role and experience level so questions match your goals.' },
             { icon: FiMic, title: 'Start an interview', desc: 'Choose solo AI mode or join a peer room. Answer questions using your microphone.' },
             { icon: FiBarChart2, title: 'Get AI feedback', desc: 'Receive detailed scoring and actionable suggestions to improve.' },
             { icon: FiClock, title: 'Track progress', desc: 'Review past sessions and watch your scores trend upward over time.' },
           ].map((step, index) => (
-            <div key={index} className={styles.step}>
+            <motion.div 
+              key={index} 
+              className={styles.step}
+              variants={itemVariants}
+              whileHover={{ scale: 1.02, x: 10 }}
+            >
               <div className={styles.stepNumber}>{index + 1}</div>
               <div className={styles.stepContent}>
                 <h3 className={styles.stepTitle}>{step.title}</h3>
                 <p className={styles.stepDesc}>{step.desc}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* CTA Section */}
       <section className={styles.ctaSection}>
-        <div className={`${styles.ctaCard} glass-card`}>
+        <motion.div 
+          className={`${styles.ctaCard} glass-card`}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ type: 'spring', stiffness: 100 }}
+        >
           <h2 className={styles.ctaTitle}>Ready to ace your next interview?</h2>
           <p className={styles.ctaSubtitle}>Start practicing today — it's completely free.</p>
           <Link to={user ? '/dashboard' : '/register'}>
@@ -149,7 +199,7 @@ const Landing = () => {
               <FiArrowRight />
             </Button>
           </Link>
-        </div>
+        </motion.div>
       </section>
 
       {/* Footer */}
@@ -157,7 +207,7 @@ const Landing = () => {
         <div className={styles.footerTop}>
           <div className={styles.footerBrand}>
             <div className={styles.footerLogo}>
-              <FiZap className={styles.logoIcon} />
+              <FiCommand className={styles.logoIcon} />
               <span>Interview<span className="gradient-text">AI</span></span>
             </div>
             <p className={styles.footerDesc}>

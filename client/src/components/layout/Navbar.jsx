@@ -1,5 +1,5 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { FiUser, FiLogOut, FiMenu, FiX, FiZap } from 'react-icons/fi';
+import { FiUser, FiLogOut, FiMenu, FiX, FiCommand } from 'react-icons/fi';
 import { useState } from 'react';
 import useAuthStore from '../../stores/authStore';
 import Button from '../common/Button';
@@ -23,7 +23,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.container}>
         <Link to="/" className={styles.logo}>
-          <FiZap className={styles.logoIcon} />
+          <FiCommand className={styles.logoIcon} />
           <span className={styles.logoText}>Interview<span className={styles.logoAccent}>AI</span></span>
         </Link>
 

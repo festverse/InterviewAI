@@ -39,7 +39,6 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   margin-bottom: var(--space-8);
-  animation: fadeInUp 0.6s ease forwards;
 }
 
 .heroTitle {
@@ -48,7 +47,6 @@
   line-height: var(--line-height-tight);
   letter-spacing: -0.03em;
   margin-bottom: var(--space-6);
-  animation: fadeInUp 0.6s ease 0.1s both;
 }
 
 .heroSubtitle {
@@ -57,7 +55,6 @@
   line-height: var(--line-height-relaxed);
   max-width: 560px;
   margin: 0 auto var(--space-10);
-  animation: fadeInUp 0.6s ease 0.2s both;
 }
 
 .heroCta {
@@ -65,7 +62,6 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-4);
-  animation: fadeInUp 0.6s ease 0.3s both;
 }
 
 /* Stats */
@@ -80,7 +76,6 @@
   backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
-  animation: fadeInUp 0.6s ease 0.4s both;
 }
 
 .statItem {
