@@ -22,13 +22,13 @@
 /* Variants */
 .primary {
   background: var(--gradient-primary);
-  color: white;
+  color: var(--text-inverse);
   box-shadow: var(--shadow-sm), var(--shadow-glow-primary);
 }
 
 .primary:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md), 0 0 30px rgba(124, 58, 237, 0.4);
+  box-shadow: var(--shadow-md), 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
 .primary:active:not(:disabled) {
@@ -43,7 +43,7 @@
 
 .secondary:hover:not(:disabled) {
   border-color: var(--accent-primary);
-  background: rgba(124, 58, 237, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   transform: translateY(-2px);
 }
 

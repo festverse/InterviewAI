@@ -16,7 +16,7 @@
   transform: translateX(-50%);
   width: 800px;
   height: 600px;
-  background: radial-gradient(ellipse, rgba(124, 58, 237, 0.15) 0%, rgba(59, 130, 246, 0.08) 40%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 40%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -32,8 +32,8 @@
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-2) var(--space-4);
-  background: rgba(124, 58, 237, 0.15);
-  border: 1px solid rgba(124, 58, 237, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-full);
   color: var(--accent-primary);
   font-size: var(--font-size-sm);
@@ -192,7 +192,7 @@
 
 .step:hover {
   border-color: var(--border-accent);
-  background: rgba(124, 58, 237, 0.05);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .stepNumber {
@@ -241,7 +241,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
   pointer-events: none;
 }
 

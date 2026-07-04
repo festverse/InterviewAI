@@ -70,8 +70,8 @@ img {
 }
 
 /* === Utility Classes === */
-.text-accent {
-  background: var(--accent);
+.gradient-text {
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
