@@ -139,7 +139,7 @@ const Landing = () => {
               className={`${styles.featureCard} glass-card`}
             >
               <div className={styles.featureIconWrapper} style={{ background: feature.gradient }}>
-                <feature.icon size={24} color="white" />
+                <feature.icon size={24} color="black" />
               </div>
               <h3 className={styles.featureTitle}>{feature.title}</h3>
               <p className={styles.featureDescription}>{feature.description}</p>

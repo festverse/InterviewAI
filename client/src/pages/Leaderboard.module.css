@@ -83,18 +83,25 @@
 }
 
 .top1 {
-  background: rgba(255, 215, 0, 0.1);
+  background: rgba(255, 255, 255, 0.08);
 }
 .top1 td {
-  color: #ffd700;
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .top2 {
-  background: rgba(192, 192, 192, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+.top2 td {
+  color: var(--text-primary);
 }
 
 .top3 {
-  background: rgba(205, 127, 50, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
+.top3 td {
+  color: var(--text-primary);
 }
 
 .pagination {

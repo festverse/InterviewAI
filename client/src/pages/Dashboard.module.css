@@ -22,7 +22,7 @@
   right: -10%;
   width: 400px;
   height: 300px;
-  background: radial-gradient(ellipse, rgba(124, 58, 237, 0.12) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -70,9 +70,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(124, 58, 237, 0.15);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
-  color: var(--accent-primary);
+  color: var(--text-primary);
   font-size: 20px;
 }
 
