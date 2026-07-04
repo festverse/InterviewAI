@@ -4,12 +4,17 @@ import useAuthStore from './stores/authStore';
 
 // Layout & Common
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 import ProtectedRoute from './components/common/ProtectedRoute';
 
 // Pages
 import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import About from './pages/About';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import Contact from './pages/Contact';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 import SoloInterview from './pages/SoloInterview';
@@ -35,6 +40,10 @@ const App = () => {
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/contact" element={<Contact />} />
           
           {/* Protected Routes */}
           <Route path="/dashboard" element={
@@ -88,6 +97,7 @@ const App = () => {
           } />
         </Routes>
       </main>
+      <Footer />
     </BrowserRouter>
   );
 };
