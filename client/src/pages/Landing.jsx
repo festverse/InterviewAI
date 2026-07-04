@@ -3,6 +3,7 @@ import { FiCommand, FiUsers, FiBarChart2, FiMic, FiArrowRight, FiShield, FiClock
 import { motion } from 'framer-motion';
 import Button from '../components/common/Button';
 import useAuthStore from '../stores/authStore';
+import Background3D from '../components/common/Background3D';
 import styles from './Landing.module.css';
 
 const features = [
@@ -50,7 +51,8 @@ const Landing = () => {
   };
 
   return (
-    <div className="page">
+    <div className="page" style={{ position: 'relative', zIndex: 1 }}>
+      <Background3D />
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroGlow} />
