@@ -1,5 +1,5 @@
 .footer {
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   border-top: 1px solid var(--glass-border);
   padding: var(--space-16) 0 var(--space-8);
   margin-top: auto;

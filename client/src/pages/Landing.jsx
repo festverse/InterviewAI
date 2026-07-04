@@ -204,43 +204,6 @@ const Landing = () => {
         </motion.div>
       </section>
 
-      {/* Footer */}
-      <footer className={styles.footer}>
-        <div className={styles.footerTop}>
-          <div className={styles.footerBrand}>
-            <div className={styles.footerLogo}>
-              <FiCommand className={styles.logoIcon} />
-              <span>Interview<span className="gradient-text">AI</span></span>
-            </div>
-            <p className={styles.footerDesc}>
-              The ultimate AI-powered interview preparation toolkit. Practice, learn, and land your dream job.
-            </p>
-          </div>
-          
-          <div className={styles.footerLinksGrid}>
-            <div className={styles.footerColumn}>
-              <h4 className={styles.footerColumnTitle}>Product</h4>
-              <Link to="/register" className={styles.footerLink}>Get Started</Link>
-              <Link to="/interview" className={styles.footerLink}>Solo Practice</Link>
-              <Link to="/peer" className={styles.footerLink}>Peer Interviews</Link>
-              <Link to="/leaderboard" className={styles.footerLink}>Leaderboard</Link>
-            </div>
-            <div className={styles.footerColumn}>
-              <h4 className={styles.footerColumnTitle}>Account</h4>
-              <Link to="/dashboard" className={styles.footerLink}>Dashboard</Link>
-              <Link to="/profile" className={styles.footerLink}>Profile</Link>
-              <Link to="/history" className={styles.footerLink}>History</Link>
-              <Link to="/login" className={styles.footerLink}>Sign In</Link>
-            </div>
-          </div>
-        </div>
-        
-        <div className={styles.footerBottom}>
-          <p className={styles.footerText}>
-            © {new Date().getFullYear()} InterviewAI. All rights reserved by Utsav Vasava.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 };

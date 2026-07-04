@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.bottom}>
-          <p>&copy; {currentYear} InterviewAI. All rights reserved.</p>
+          <p>&copy; 2026 InterviewAI. All rights reserved by Utsav Vasava.</p>
         </div>
       </div>
     </footer>
