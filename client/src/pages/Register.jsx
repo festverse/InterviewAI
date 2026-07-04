@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FiUser, FiMail, FiLock, FiZap } from 'react-icons/fi';
+import { FiUser, FiMail, FiLock, FiCommand } from 'react-icons/fi';
 import useAuthStore from '../stores/authStore';
 import Button from '../components/common/Button';
 import Input from '../components/common/Input';
@@ -45,7 +45,7 @@ const Register = () => {
         <div className={styles.formCard}>
           <div className={styles.header}>
             <div className={styles.iconWrapper}>
-              <FiZap size={28} />
+              <FiCommand size={28} />
             </div>
             <h1 className={styles.title}>Create your account</h1>
             <p className={styles.subtitle}>Start preparing for your dream job</p>

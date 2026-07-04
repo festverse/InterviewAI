@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { FiMail, FiLock, FiZap } from 'react-icons/fi';
+import { FiMail, FiLock, FiCommand } from 'react-icons/fi';
 import useAuthStore from '../stores/authStore';
 import Button from '../components/common/Button';
 import Input from '../components/common/Input';
@@ -46,7 +46,7 @@ const Login = () => {
         <div className={styles.formCard}>
           <div className={styles.header}>
             <div className={styles.iconWrapper}>
-              <FiZap size={28} />
+              <FiCommand size={28} />
             </div>
             <h1 className={styles.title}>Welcome back</h1>
             <p className={styles.subtitle}>Sign in to continue your interview prep</p>

@@ -5,7 +5,7 @@ const User = require('../models/User');
 module.exports = (server) => {
   const io = socketIo(server, {
     cors: {
-      origin: process.env.CLIENT_URL || '*',
+      origin: [process.env.CLIENT_URL || 'http://localhost:5173', 'https://interview-ai-three-rose.vercel.app'],
       methods: ['GET', 'POST']
     }
   });
