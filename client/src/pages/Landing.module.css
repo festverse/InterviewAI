@@ -73,7 +73,6 @@
   margin-top: var(--space-20);
   padding: var(--space-8) var(--space-12);
   background: var(--glass-bg);
-  backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
 }
