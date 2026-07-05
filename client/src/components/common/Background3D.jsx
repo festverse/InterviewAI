@@ -22,9 +22,14 @@ function AnimatedGeometry() {
 
 const Background3D = () => {
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, pointerEvents: 'none' }}>
-      <Canvas camera={{ position: [0, 0, 5] }} dpr={[1, 1.5]}>
-        <Stars radius={100} depth={50} count={1500} factor={4} saturation={0} fade speed={2} />
+    <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, pointerEvents: 'none', transform: 'translateZ(0)', willChange: 'transform' }}>
+      <Canvas 
+        camera={{ position: [0, 0, 5] }} 
+        dpr={[1, 1]} 
+        gl={{ alpha: false, antialias: false, powerPreference: "high-performance" }}
+      >
+        <color attach="background" args={['#000000']} />
+        <Stars radius={100} depth={50} count={1000} factor={4} saturation={0} fade speed={2} />
         <AnimatedGeometry />
       </Canvas>
     </div>

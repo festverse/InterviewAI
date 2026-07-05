@@ -35,7 +35,7 @@ const App = () => {
   }, [initialize]);
 
   return (
-    <ReactLenis root>
+    <ReactLenis root options={{ lerp: 0.1, duration: 1.2, smoothWheel: true }}>
       <BrowserRouter>
         <Navbar />
         <main>
