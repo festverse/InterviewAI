@@ -34,17 +34,11 @@ const App = () => {
     initialize();
 
     // Initialize Lenis for smooth scrolling
-    const lenis = new Lenis();
-
-    let rafId;
-    function raf(time) {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    }
-    rafId = requestAnimationFrame(raf);
+    const lenis = new Lenis({
+      autoRaf: true,
+    });
 
     return () => {
-      cancelAnimationFrame(rafId);
       lenis.destroy();
     };
   }, [initialize]);
