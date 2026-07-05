@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import useAuthStore from './stores/authStore';
-import Lenis from 'lenis';
+import { ReactLenis } from 'lenis/react';
 import 'lenis/dist/lenis.css';
 
 // Layout & Common
@@ -32,21 +32,13 @@ const App = () => {
 
   useEffect(() => {
     initialize();
-
-    // Initialize Lenis for smooth scrolling
-    const lenis = new Lenis({
-      autoRaf: true,
-    });
-
-    return () => {
-      lenis.destroy();
-    };
   }, [initialize]);
 
   return (
-    <BrowserRouter>
-      <Navbar />
-      <main>
+    <ReactLenis root>
+      <BrowserRouter>
+        <Navbar />
+        <main>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
@@ -110,6 +102,7 @@ const App = () => {
       </main>
       <Footer />
     </BrowserRouter>
+  </ReactLenis>
   );
 };
 
