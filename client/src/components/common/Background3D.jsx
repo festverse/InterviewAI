@@ -15,7 +15,7 @@ function AnimatedGeometry() {
   return (
     <mesh ref={meshRef} position={[0, 0, -5]}>
       <icosahedronGeometry args={[4, 1]} />
-      <meshBasicMaterial color="#888888" wireframe transparent opacity={0.6} />
+      <meshBasicMaterial color="#333333" wireframe transparent opacity={0.3} />
     </mesh>
   );
 }
